@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Enhanced HTML5 Form Example</title>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Enhanced Registration Form Demo</h1>
+      <p>This page showcases a well-structured and accessible HTML5 form, including media, tables, and lists.</p>
+    </header>
+
+    <section aria-labelledby="overview">
+      <h2 id="overview">Page Overview</h2>
+      <ul>
+        <li><strong>Informative table</strong> for available courses and fees.</li>
+        <li><strong>Media:</strong> Representative photo and downloadable PDF guide.</li>
+        <li><strong>Accessible, validated registration form</strong> for new users.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="course-table">
+      <h2 id="course-table">Popular Courses &amp; Fees</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Level</th>
+            <th>Fee</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development</td>
+            <td>Beginner</td>
+            <td>$350</td>
+            <td>8 weeks</td>
+          </tr>
+          <tr>
+            <td>Data Science</td>
+            <td>Intermediate</td>
+            <td>$450</td>
+            <td>10 weeks</td>
+          </tr>
+          <tr>
+            <td>UX/UI Design</td>
+            <td>Beginner</td>
+            <td>$300</td>
+            <td>6 weeks</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="media">
+      <h2 id="media">Explore Campus</h2>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Modern study space" width="330" height="200" />
+        <figcaption>Our modern learning space (Unsplash).</figcaption>
+      </figure>
+      <p>
+        Download our <a href="#" aria-label="Download Course Guide PDF" download>Course Guide (PDF)</a>.
+      </p>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Welcome announcement (sample audio).</figcaption>
+    </section>
+
+    <section aria-labelledby="registration-form">
+      <h2 id="registration-form">Student Registration Form</h2>
+      <form action="#" method="post" autocomplete="on" novalidate>
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="Jane" required autocomplete="given-name" />
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jane.doe@example.com" required autocomplete="email" />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+254700123456"
+            pattern="^\+?\d{10,15}$"
+            required
+            autocomplete="tel"
+          />
+        </div>
+
+        <div>
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select...</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="nonbinary">Non-binary</option>
+            <option value="other">Other</option>
+            <option value="prefer-not-say">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="123 Main St, Nairobi" rows="2" required autocomplete="street-address"></textarea>
+        </div>
+
+        <fieldset>
+          <legend>Preferred Learning Mode</legend>
+          <input type="radio" id="online" name="mode" value="online" required />
+          <label for="online">Online</label>
+          <input type="radio" id="onsite" name="mode" value="onsite" />
+          <label for="onsite">Onsite</label>
+          <input type="radio" id="hybrid" name="mode" value="hybrid" />
+          <label for="hybrid">Hybrid</label>
+        </fieldset>
+
+        <div>
+          <label for="course-select">Choose a Course</label>
+          <select id="course-select" name="course-select" required>
+            <option value="" disabled selected>Select course...</option>
+            <option value="webdev">Web Development</option>
+            <option value="datasci">Data Science</option>
+            <option value="uxui">UX/UI Design</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Availability for Sessions</legend>
+          <input type="checkbox" id="av-mon" name="availability" value="Monday" />
+          <label for="av-mon">Monday</label>
+          <input type="checkbox" id="av-tue" name="availability" value="Tuesday" />
+          <label for="av-tue">Tuesday</label>
+          <input type="checkbox" id="av-sat" name="availability" value="Saturday" />
+          <label for="av-sat">Saturday</label>
+        </fieldset>
+
+        <div>
+          <label for="notes">Additional Comments (Optional)</label>
+          <textarea id="notes" name="notes" placeholder="Let us know anything important..." rows="2"></textarea>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" id="agree" name="agree" required />
+            I agree to the <a href="#" tabindex="0">terms and conditions</a> <span aria-hidden="true">*</span>
+          </label>
+        </div>
+
+        <div>
+          <label for="regno">Registration Number</label>
+          <input type="text" id="regno" name="regno" value="AUTO-2025-001" readonly />
+        </div>
+
+        <div>
+          <button type="submit">Submit Registration</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
